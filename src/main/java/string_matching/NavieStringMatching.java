@@ -15,7 +15,7 @@ public class NavieStringMatching {
         System.out.println("有效位移是： " + index);
     }
 
-    public int stringMatcher(String T, String P) {
+    private int stringMatcher(String T, String P) {
         int iTLen = T.length();
         int iPLen = P.length();
         for (int s = 0; s <= iTLen - iPLen; s++) {

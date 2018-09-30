@@ -8,7 +8,7 @@ package string_matching;
  */
 public class KMPStringMatching {
 
-    public static int[] getNext(String ps) {
+    private static int[] getNext(String ps) {
         char[] p = ps.toCharArray();
         int[] next = new int[p.length];
         next[0] = -1;

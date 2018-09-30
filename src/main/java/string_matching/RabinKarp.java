@@ -2,7 +2,7 @@ package string_matching;
 
 public class RabinKarp {
 
-    public static void RabinKarpAlogrithm(char[] T,char[] P,int d,int q){
+    private static void RabinKarpAlogrithm(char[] T,char[] P,int d,int q){
         int n = T.length;
         int m = P.length;
         if(n < m) return;
