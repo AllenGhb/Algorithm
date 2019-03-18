@@ -44,11 +44,38 @@ public class BubbleSort {
         }
     }
 
+    /**
+     * 冒泡排序算法(最优时间复杂度)
+     *
+     * @param a 待排序的数组
+     * @param length 待排序的数组的长度
+     * @author 周何圳 2019年03月18日 新建
+     */
+    private static void optimalBubbleSort(int[] a, int length) {
+        for (int j = 0; j < length; j++) {
+            // 提前退出冒泡循环的标志位
+            boolean flag = false;
+            for (int i = 0; i < length - 1 - j; i++) {
+                if (a[i] > a[i + 1]) {
+                    swap(a, i, i + 1);
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                // 没有数据交换，提前退出
+                break;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         /** 从小到大冒泡排序 **/
         int[] a = { 6, 5, 3, 1, 8, 7, 2, 4 };
-        bubbleSort(a,a.length);
+        int[] b = { 3, 5, 4, 1, 2, 6 };
+        bubbleSort(a, a.length);
+        optimalBubbleSort(a, a.length);
         System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
     }
 
 }
