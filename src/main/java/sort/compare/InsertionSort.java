@@ -21,6 +21,12 @@ public class InsertionSort {
      * @author 周何圳 2018年09月30日 新建
      */
     private static void insertionSort(int[] a, int length) {
+
+        // 数组为空或者只有一个元素的时候不需要排序
+        if (a == null || length <= 1) {
+            return;
+        }
+
         /** 类似抓扑克牌排序 **/
         for (int i = 1; i < length; i++) {
             /** 右手抓到一张扑克牌,a[i]必须先存起来,不然后面会被a[j+1]给覆盖掉 **/
@@ -35,9 +41,12 @@ public class InsertionSort {
                 } else {
                     break;
                 }
+                // System.out.println("插入中" + Arrays.toString(a));
             }
             /** 直到该手牌比抓到的牌小(或二者相等)，将抓到的牌插入到该手牌右边(相等元素的相对次序未变，所以插入排序是稳定的) **/
             a[j + 1] = key;
+            // System.out.println("j="+ j);
+            // System.out.println("结果" + Arrays.toString(a));
         }
     }
 

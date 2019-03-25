@@ -96,13 +96,14 @@ public class QuickSort_Partition {
         int a4[] = {3, 2, 1};
         int a5[] = {3, 1, 2};
         int a6[] = {13,19,9,5,12,8,7,4,21,2,6,11};
-        p.call_all_partition(a0, 0, a0.length - 1);
+        /*p.call_all_partition(a0, 0, a0.length - 1);
         p.call_all_partition(a1, 0, a1.length - 1);
         p.call_all_partition(a2, 0, a2.length - 1);
         p.call_all_partition(a3, 0, a3.length - 1);
         p.call_all_partition(a4, 0, a4.length - 1);
         p.call_all_partition(a5, 0, a5.length - 1);
-        p.call_all_partition(a6, 0, a6.length - 1);
+        p.call_all_partition(a6, 0, a6.length - 1);*/
+        System.out.println(p.partition(a6,0,a6.length-1));
     }
 
 }

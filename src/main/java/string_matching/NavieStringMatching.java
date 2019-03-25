@@ -1,7 +1,7 @@
 package string_matching;
 
 /**
- * 朴素字符串匹配算法
+ * 朴素字符串匹配算法Brute Force（BF算法）
  *
  * @author 周何圳 2018年09月10日 新建
  */
